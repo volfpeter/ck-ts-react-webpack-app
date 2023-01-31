@@ -1,0 +1,10 @@
+{
+    "app_name": "My React App",
+    "project_slug": "{{cookiecutter.app_name | lower | replace('-', '_') | replace(' ', '_') }}",
+    "license": ["MIT", "GNU LGPLv3", "GNU GPLv3", "GNU AGPLv3", "Proprietary"],
+    "author": "",
+    "email": "",
+    "version": "0.0.1",
+    "description": "{{cookiecutter.app_name}}",
+    "dev_server_port": "42000"
+}

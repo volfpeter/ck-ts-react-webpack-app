@@ -1,0 +1,85 @@
+{
+    "name": "{{ cookiecutter.app_name }}",
+    "version": "{{ cookiecutter.version }}",
+    "description": "{{ cookiecutter.description }}",
+    "author": "{{ cookiecutter.author }}",
+    "license": "{%- if cookiecutter.license == 'Proprietary' -%} LicenseRef-LICENSE {%- else -%} {{ cookiecutter.license }} {%- endif -%}",
+    "main": "./dist/bundle.js",
+    "scripts": {
+        "bundle": "webpack --config webpack.dev.js",
+        "bundle:prod": "webpack --config webpack.prod.js",
+        "create-cert": "openssl req -x509 -newkey rsa:4096 -nodes -out certificate.pem -keyout private.key -days 3650",
+        "lint": "eslint \"./src/**/*.{js,ts,tsx}\" ",
+        "lint:fix": "eslint \"./src/**/*.{js,ts,tsx}\" --fix ",
+        "start": "webpack serve --port {{ cookiecutter.dev_server_port }} --config webpack.dev.js --server-type https",
+        "start:prod": "webpack serve --port {{ cookiecutter.dev_server_port }} --config webpack.prod.js --server-type https",
+        "test": "mocha --loader=ts-node/esm.mjs",
+        "test:cover": "c8 --check-coverage --all mocha --loader=ts-node/esm.mjs"
+    },
+    "mocha": {
+        "spec": [
+            "test/**/*.spec.ts",
+            "test/**/*.spec.mts"
+        ],
+        "color": true
+    },
+    "c8": {
+        "reporter": [
+            "html",
+            "text",
+            "text-summary"
+        ],
+        "extension": [
+            ".ts"
+        ],
+        "include": [
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "**/*.d.ts"
+        ],
+        "all": true
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^12.1.4"
+    },
+    "devDependencies": {
+        "@alienfast/i18next-loader": "^2.0.1",
+        "@types/chai": "^4.3.4",
+        "@types/chai-as-promised": "^7.1.5",
+        "@types/chai-spies": "^1.0.3",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "^18.11.18",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "@types/webpack-env": "^1.18.0",
+        "@typescript-eslint/eslint-plugin": "^5.49.0",
+        "@typescript-eslint/parser": "^5.49.0",
+        "c8": "^7.12.0",
+        "chai": "^4.3.7",
+        "chai-as-promised": "^7.1.1",
+        "chai-spies": "^1.0.0",
+        "css-loader": "^6.7.3",
+        "dotenv-webpack": "^8.0.1",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mocha": "^10.2.0",
+        "prettier": "^2.8.3",
+        "source-map-loader": "^4.0.1",
+        "source-map-support": "^0.5.21",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.4.2",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.4",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.11.1",
+        "webpack-merge": "^5.8.0"
+    }
+}
