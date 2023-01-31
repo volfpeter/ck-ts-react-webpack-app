@@ -1,6 +1,6 @@
 {
     "app_name": "My React App",
-    "project_slug": "{{cookiecutter.app_name | lower | replace('-', '_') | replace(' ', '_') }}",
+    "project_slug": "{{cookiecutter.app_name | lower | replace(' ', '-') }}",
     "license": ["MIT", "GNU LGPLv3", "GNU GPLv3", "GNU AGPLv3", "Proprietary"],
     "author": "",
     "email": "",
