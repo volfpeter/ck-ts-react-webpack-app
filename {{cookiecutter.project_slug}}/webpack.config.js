@@ -73,12 +73,6 @@ module.exports = {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
-
-            // Process .less files via the LESS loader
-            {
-                test: /\.less$/,
-                use: ["style-loader", "css-loader", "less-loader"],
-            },
         ],
     },
 
