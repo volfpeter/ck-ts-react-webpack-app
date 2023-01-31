@@ -2,7 +2,7 @@
 
 Minimal cookiecutter template for translatable single-page web applications using TypeScript, React, and Webpack.
 
-Install [cookiecutter](https://cookiecutter.readthedocs.io/) and generate your application from this template.
+Install [cookiecutter](https://cookiecutter.readthedocs.io/) and generate your application from this template using the `cookiecutter gh:volfpeter/ck-ts-react-webpack-app` command.
 
 See the generated project's readme for further instructions.
 
