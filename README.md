@@ -15,3 +15,7 @@ See the generated project's readme for further instructions.
 
 -   Dev server and bundler: `webpack`, `webpack-cli`, `webpack-dev-server`, `webpack-merge`.
 -   Testing and coverage: `chai`, `mocha`, and `c8`.
+
+## Guides
+
+-   [How to](./guides/tailwindcss.md) add [Tailwind CSS](https://tailwindcss.com/) support to a project
