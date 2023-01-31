@@ -1,6 +1,6 @@
 # Tailwind CSS guide
 
-This guide will walk you through the steps of adding Tailwind CSS to a project that was generated from this cookiecutter template.
+This guide will walk you through the steps of adding [Tailwind CSS](https://tailwindcss.com/) to a project that was generated from this cookiecutter template.
 
 Commands should be run in the root folder of your project.
 
@@ -81,3 +81,9 @@ import { Main } from "./Main"
 ## 6. Restart
 
 Stop the Webpack dev server (the `npm run start` process) if it is running to make Webpack pick up your configuration changes and start it again.
+
+## 7. Install Headless UI (optional)
+
+[Headless UI](https://headlessui.com/) is a library of unstyled, accessible UI components that integrate well with Tailwind CSS.
+
+You can install it with `npm install @headlessui/react`, no extra configuration needed.
